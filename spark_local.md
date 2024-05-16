@@ -23,7 +23,7 @@ spark = SparkSession.builder \
 
 # Define el esquema para el CSV
 csvSchema = StructType([
-    StructField("Index", IntegerTyper(), True),
+    StructField("Index", IntegerType(), True),
     StructField("CRASH DATE", StringType(), True),
     StructField("CRASH TIME", StringType(), True),
     StructField("BOROUGH", StringType(), True),
