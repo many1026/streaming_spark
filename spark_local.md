@@ -80,15 +80,11 @@ totalAccidentsByBorough.writeStream.outputMode("complete").format("console").sta
 ```
 <img width="1440" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/0ec88f5d-44df-44d2-b517-1d77b4bdb934">
 
-## Calcular el Número Promedio de Lesiones por Accidentes
-``` python
-from pyspark.sql.functions import avg
-
-averageInjuries = streamingInputDF.groupBy("BOROUGH").agg(avg("NUMBER OF PERSONS INJURED"))
-averageInjuries.writeStream.outputMode("complete").format("console").start().awaitTermination()
-```
 ## Distribución de Accidentes por Código Postal
 ```python
 accidentsByZipCode = streamingInputDF.groupBy("ZIP CODE").count()
 accidentsByZipCode.writeStream.outputMode("complete").format("console").start().awaitTermination()
 ```
+# Resultado:
+<img width="432" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/75e24773-3bf2-417d-9f8e-ab3f7c8143b5">
+
