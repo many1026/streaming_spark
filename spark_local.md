@@ -23,14 +23,15 @@ spark = SparkSession.builder \
 
 # Define el esquema para el CSV
 csvSchema = StructType([
+    StructField("Index", IntegerTyper(), True),
     StructField("CRASH DATE", StringType(), True),
     StructField("CRASH TIME", StringType(), True),
     StructField("BOROUGH", StringType(), True),
     StructField("ZIP CODE", StringType(), True),
     StructField("LATITUDE", DoubleType(), True),
     StructField("LONGITUDE", DoubleType(), True),
-    StructField("NUMBER OF PERSONS INJURED", IntegerType(), True),
-    StructField("NUMBER OF PERSONS KILLED", IntegerType(), True)
+    StructField("NUMBER OF PERSONS INJURED", DoubleType(), True),
+    StructField("NUMBER OF PERSONS KILLED", DoubleType(), True)
 ])
 
 # Configurar el DataFrame de entrada de streaming
