@@ -51,5 +51,33 @@ query.awaitTermination()
 Este codigo inicia la consulta y espera a que termine para mostrar los datos en la consola en modo append.
 
 
+# Analisis Interesantes
+## Agrupa los datos por ventanas de tiempo de 1 hora y cuenta el número de elementos en cada grupo.
+``` python
+from pyspark.sql.functions import window
 
+streamingCountsDF = (
+  streamingInputDF
+    .groupBy(
+      streamingInputDF.BOROUGH,
+      window(streamingInputDF["CRASH DATE"], "1 hour"))
+    .count()
+)
+```
+## Contar el Número Total de Accidentes por Borough
+``` python
+totalAccidentsByBorough = streamingInputDF.groupBy("BOROUGH").count()
+totalAccidentsByBorough.writeStream.outputMode("complete").format("console").start().awaitTermination()
+```
+## Calcular el Número Promedio de Lesiones por Accidentes
+``` python
+from pyspark.sql.functions import avg
 
+averageInjuries = streamingInputDF.groupBy("BOROUGH").agg(avg("NUMBER OF PERSONS INJURED"))
+averageInjuries.writeStream.outputMode("complete").format("console").start().awaitTermination()
+```
+## Distribución de Accidentes por Código Postal
+```python
+accidentsByZipCode = streamingInputDF.groupBy("ZIP CODE").count()
+accidentsByZipCode.writeStream.outputMode("complete").format("console").start().awaitTermination()
+```
