@@ -91,3 +91,11 @@ accidentsByZipCode.writeStream.outputMode("complete").format("console").start().
 # Resultado:
 <img width="432" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/75e24773-3bf2-417d-9f8e-ab3f7c8143b5">
 
+## Accidentes por Hora del Día
+```python
+from pyspark.sql.functions import hour
+
+accidents_by_hour = streamingInputDF.withColumn("Hour", hour("CRASH TIME")).groupBy("Hour").count()
+accidents_by_hour.writeStream.outputMode("complete").format("console").start().awaitTermination()
+
+```
