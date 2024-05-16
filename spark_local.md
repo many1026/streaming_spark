@@ -56,6 +56,8 @@ y estamos indicando que los archivos CSV tienen una fila de encabezado (header).
 query = streamingInputDF.writeStream.outputMode("append").format("console").start()
 ``` 
 Este codigo inicia la consulta y espera a que termine para mostrar los datos en la consola en modo append.
+# Resultado:
+<img width="1038" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/c919218e-bca3-4f6f-bc10-ed5320a6f804">
 
 
 # Analisis Interesantes
