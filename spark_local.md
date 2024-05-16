@@ -58,7 +58,8 @@ query = streamingInputDF.writeStream.outputMode("append").format("console").star
 ``` 
 Este codigo inicia la consulta y espera a que termine para mostrar los datos en la consola en modo append.
 # Resultado:
-<img width="1038" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/c919218e-bca3-4f6f-bc10-ed5320a6f804">
+<img width="1227" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/e5a467d2-2efb-4be6-9669-709ddeb6021d">
+
 
 
 # Analisis Interesantes
