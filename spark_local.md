@@ -8,14 +8,18 @@ Primero, crea una sesión de Spark y asigna más memoria a la JVM (Java Virtual 
 
 ``` python
 from pyspark.sql import SparkSession
+from pyspark.sql.types import *
 
-# Crea la sesión de Spark con más memoria asignada
+# Crear la sesión de Spark con más memoria asignada y configuraciones adicionales
 spark = SparkSession.builder \
     .appName("TuApp") \
-    .config("spark.driver.memory", "4g") \
-    .config("spark.executor.memory", "4g") \
+    .config("spark.driver.memory", "8g") \
+    .config("spark.executor.memory", "8g") \
+    .config("spark.sql.shuffle.partitions", "200") \
+    .config("spark.sql.streaming.forceDeleteTempCheckpointLocation", "true") \
+    .config("spark.memory.fraction", "0.8") \
+    .config("spark.memory.storageFraction", "0.2") \
     .getOrCreate()
-from pyspark.sql.types import *
 
 # Define el esquema para el CSV
 csvSchema = StructType([
@@ -28,7 +32,8 @@ csvSchema = StructType([
     StructField("NUMBER OF PERSONS INJURED", IntegerType(), True),
     StructField("NUMBER OF PERSONS KILLED", IntegerType(), True)
 ])
-# Configurar el DataFrame de Entrada de Streaming
+
+# Configurar el DataFrame de entrada de streaming
 inputPath = "/Users/mny_1026/Downloads/csv_directory"
 
 streamingInputDF = (
@@ -40,6 +45,9 @@ streamingInputDF = (
         .format("csv")
         .load(inputPath)
 )
+
+
+
 ```
 En este paso, estamos configurando PySpark para cargar un archivo por cada trigger (maxFilesPerTrigger)
 y estamos indicando que los archivos CSV tienen una fila de encabezado (header).
