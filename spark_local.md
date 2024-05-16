@@ -54,7 +54,6 @@ y estamos indicando que los archivos CSV tienen una fila de encabezado (header).
 ``` python
 # Iniciar la Consulta de Escritura en la Consola
 query = streamingInputDF.writeStream.outputMode("append").format("console").start()
-query.awaitTermination()
 ``` 
 Este codigo inicia la consulta y espera a que termine para mostrar los datos en la consola en modo append.
 
