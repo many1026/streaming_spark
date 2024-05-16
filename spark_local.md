@@ -77,6 +77,8 @@ streamingCountsDF = (
 totalAccidentsByBorough = streamingInputDF.groupBy("BOROUGH").count()
 totalAccidentsByBorough.writeStream.outputMode("complete").format("console").start().awaitTermination()
 ```
+<img width="1440" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/0ec88f5d-44df-44d2-b517-1d77b4bdb934">
+
 ## Calcular el Número Promedio de Lesiones por Accidentes
 ``` python
 from pyspark.sql.functions import avg
