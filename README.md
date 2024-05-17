@@ -65,7 +65,7 @@ Para ejecutar el análisis y entrenamiento del modelo, abra y siga las instrucci
 
 El modelo de regresión logística entrenado se evaluó utilizando el área bajo la curva ROC (AUC-ROC). A continuación se muestra la gráfica ROC obtenida:
 
-![ROC Curve](![image](https://github.com/many1026/streaming_spark/assets/73008381/15f95caa-98f8-47b3-94ac-73e6a3bf4e10))
+![ROC Curve](https://github.com/many1026/streaming_spark/assets/73008381/15f95caa-98f8-47b3-94ac-73e6a3bf4e10)
 
 La gráfica muestra el rendimiento del modelo con un área bajo la curva de aproximadamente 0.66, lo que indica un rendimiento moderado del modelo en la predicción de la severidad de las colisiones.
 
