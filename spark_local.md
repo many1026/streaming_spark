@@ -106,6 +106,7 @@ accidents_by_hour.writeStream.outputMode("complete").format("console").start().a
 # MODELO DE MACHINE LEARNING
 
 <img width="1440" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/9d0be754-5a6c-4522-8cc2-c327a33d4d34">
+
 # Análisis de la Curva ROC para la Regresión Logística
 ## Descripción General
 La gráfica muestra la curva ROC (Receiver Operating Characteristic) resultante de aplicar un modelo de regresión logística a los datos disponibles. La ROC es una herramienta útil para evaluar el desempeño de un clasificador binario. En el eje horizontal (X) se encuentra la Tasa de Falsos Positivos (FPR), mientras que en el eje vertical (Y) se encuentra la Tasa de Verdaderos Positivos (TPR).
