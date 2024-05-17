@@ -50,8 +50,8 @@ from pyspark.sql.functions import when, col, length, concat, lit, to_timestamp
 # Crear la columna "Severity" basada en las columnas de lesiones y muertes
 staticInputDF = staticInputDF.withColumn(
     "Severity",
-    when(col("NUMBER OF PERSONS KILLED") > 0, 1).
-    when(col("NUMBER OF PERSONS INJURED") > 0, 1).
+    when(col("NUMBER OF PERSONS KILLED") > 3, 1).
+    when(col("NUMBER OF PERSONS INJURED") > 5, 1).
     otherwise(0)
 )
 
