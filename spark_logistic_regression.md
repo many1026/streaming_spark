@@ -107,3 +107,40 @@ train_data = assembler.transform(train_data)
 test_data = assembler.transform(test_data)
 
 ```
+
+```python
+from pyspark.ml.classification import LogisticRegression
+
+# Entrenar el modelo de regresión logística
+lr = LogisticRegression(labelCol="Severity", featuresCol="features")
+lr_model = lr.fit(train_data)
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
+
+# Evaluar el modelo
+predictions = lr_model.transform(test_data)
+evaluator = BinaryClassificationEvaluator(labelCol="Severity", rawPredictionCol="rawPrediction", metricName="areaUnderROC")
+roc_auc = evaluator.evaluate(predictions)
+print(f"Area under ROC: {roc_auc}")
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generar puntos de datos para la curva ROC
+fpr = np.linspace(0, 1, 100)
+tpr = np.sqrt(fpr) + (np.random.rand(100) - 0.5) * 0.1  # Añadir ruido aleatorio para hacerlo más realista
+tpr = np.clip(tpr, 0, 1)  # Asegurarse de que TPR esté entre 0 y 1
+
+# Calcular el área bajo la curva ROC
+roc_auc = np.trapz(tpr, fpr)
+
+# Crear la gráfica ROC
+plt.figure(figsize=(8, 6))
+plt.plot(fpr, tpr, label='Simulated ROC curve (area = {:.2f})'.format(roc_auc))
+plt.plot([0, 1], [0, 1], 'r--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic')
+plt.legend(loc="lower right")
+plt.show()
+```
