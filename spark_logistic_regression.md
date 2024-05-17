@@ -92,7 +92,18 @@ balanced_data = staticInputDF.unionByName(synthetic_df)
 # Verificar la distribución de las etiquetas en el conjunto de datos balanceado
 balanced_data.groupBy("Severity").count().show()
 
-``
+```
 # Paso 4: Preparar los Datos para el Modelo
 ```python
+from pyspark.ml.feature import VectorAssembler
+
+# Crear el VectorAssembler para combinar las columnas de características en una sola columna de vectores llamada "features"
+feature_columns = ['LATITUDE', 'LONGITUDE', 'NUMBER OF PERSONS INJURED', 'NUMBER OF PERSONS KILLED']
+assembler = VectorAssembler(inputCols=feature_columns, outputCol="features")
+
+# Transformar los datos para incluir la columna de características
+train_data, test_data = balanced_data.randomSplit([0.7, 0.3], seed=42)
+train_data = assembler.transform(train_data)
+test_data = assembler.transform(test_data)
+
 ```
