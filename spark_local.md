@@ -99,3 +99,5 @@ accidents_by_hour = streamingInputDF.withColumn("Hour", hour("CRASH TIME")).grou
 accidents_by_hour.writeStream.outputMode("complete").format("console").start().awaitTermination()
 
 ```
+# Resultado
+<img width="406" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/508e418c-40a5-4627-b56a-1eba9e9885a4">
