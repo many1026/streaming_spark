@@ -101,3 +101,7 @@ accidents_by_hour.writeStream.outputMode("complete").format("console").start().a
 ```
 # Resultado
 <img width="406" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/508e418c-40a5-4627-b56a-1eba9e9885a4">
+
+
+# MODELO DE MACHINE LEARNING
+
