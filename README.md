@@ -88,10 +88,6 @@ Las contribuciones al proyecto son bienvenidas. Si desea contribuir, siga estos 
     ```
 5. Cree una Pull Request describiendo sus cambios.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Vea el archivo [LICENSE](./LICENSE) para más detalles.
-
 ## Contacto
 
 Para preguntas o sugerencias, puede contactarme a través de [mi perfil de GitHub](https://github.com/many1026).
