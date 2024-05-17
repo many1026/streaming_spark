@@ -154,3 +154,5 @@ Conforme la FPR aumenta, la TPR también lo hace, pero con fluctuaciones, lo cua
 Evaluación del Modelo:
 Aunque el modelo tiene una AUC mayor a 0.5, lo cual es positivo, el valor de 0.66 sugiere que hay espacio para mejorar.
 Dependiendo del contexto y la aplicación, una AUC de 0.66 puede ser suficiente, pero generalmente se buscaría mejorar este valor ajustando el modelo, incorporando más características, o utilizando técnicas avanzadas de modelado.
+# TIEMPO DE EJECUCION
+<img width="1440" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/0c376c29-c243-4779-8d25-bcf55741ff9c">
