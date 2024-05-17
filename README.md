@@ -55,18 +55,47 @@ El modelo se evalúa utilizando el área bajo la curva ROC (AUC-ROC) y se genera
     cd streaming_spark
     ```
 
-2. Crear un entorno virtual e instalar dependencias:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # En Windows, use `venv\Scripts\activate`
-    pip install -r requirements.txt
-    ```
-
-3. Configurar Apache Spark y PySpark según las instrucciones de instalación específicas de su sistema operativo.
+2. Configurar Apache Spark y PySpark según las instrucciones de instalación específicas de su sistema operativo.
 
 ### Ejecución del Proyecto
 
-Para ejecutar el análisis y entrenamiento del modelo:
+Para ejecutar el análisis y entrenamiento del modelo, abra y siga las instrucciones del archivo `streaming_spark.md`.
 
-```bash
-python streaming_spark.py
+## Resultados del Proyecto
+
+El modelo de regresión logística entrenado se evaluó utilizando el área bajo la curva ROC (AUC-ROC). A continuación se muestra la gráfica ROC obtenida:
+
+![ROC Curve](./image.png)
+
+La gráfica muestra el rendimiento del modelo con un área bajo la curva de aproximadamente 0.66, lo que indica un rendimiento moderado del modelo en la predicción de la severidad de las colisiones.
+
+## Contribuciones
+
+Las contribuciones al proyecto son bienvenidas. Si desea contribuir, siga estos pasos:
+
+1. Haga un fork del proyecto.
+2. Cree una nueva rama para sus cambios:
+    ```bash
+    git checkout -b mi-rama
+    ```
+3. Realice los cambios necesarios y haga commit:
+    ```bash
+    git commit -am 'Descripción de mis cambios'
+    ```
+4. Haga push a la rama:
+    ```bash
+    git push origin mi-rama
+    ```
+5. Cree una Pull Request describiendo sus cambios.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Vea el archivo [LICENSE](./LICENSE) para más detalles.
+
+## Contacto
+
+Para preguntas o sugerencias, puede contactarme a través de [mi perfil de GitHub](https://github.com/many1026).
+
+---
+
+¡Gracias por visitar este proyecto y contribuir al análisis y prevención de colisiones de vehículos!
