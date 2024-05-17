@@ -1,4 +1,4 @@
-# Solucionando Problemas de Memoria en el Heap con PySpark
+# Streaming en PySpark
 
 Este documento proporciona una guía paso a paso para solucionar problemas de memoria en el heap al cargar archivos CSV con PySpark.
 
