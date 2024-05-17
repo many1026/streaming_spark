@@ -33,6 +33,32 @@ csvSchema = StructType([
     StructField("NUMBER OF PERSONS INJURED", DoubleType(), True),
     StructField("NUMBER OF PERSONS KILLED", DoubleType(), True)
 ])
+# ALDO
+# Define the schema to speed up processing
+csvSchema = StructType([ 
+    StructField("season", IntegerType(), True),
+    StructField("date", TimestampType(), True),
+    StructField("home_team_abbr", StringType(), True),
+    StructField("away_team_abbr", StringType(), True),
+    StructField("home_team_pregame_rating", FloatType(), True),
+    StructField("away_team_pregame_rating", FloatType(), True),
+    StructField("home_team_winprob", FloatType(), True),
+    StructField("away_team_winprob", FloatType(), True),
+    StructField("overtime_prob", FloatType(), True),
+    StructField("home_team_expected_points", FloatType(), True),
+    StructField("away_team_expected_points", FloatType(), True),
+    # StructField("home_team_score", IntegerType(), True),
+    # StructField("away_team_score", IntegerType(), True),
+    # StructField("home_team_postgame_rating", IntegerType(), True),
+    # StructField("away_team_postgame_rating", IntegerType(), True),
+    # StructField("game_quality_rating", IntegerType(), True),
+    # StructField("game_importance_rating", IntegerType(), True),
+    # StructField("game_overall_rating", IntegerType(), True)
+    StructField("home_team_won", IntegerType(),True),
+    StructField("decade", IntegerType(), True)
+])
+# Configurar el DataFrame de entrada de streaming
+inputPath = "/Users/mny_1026/Downloads/hockey"
 
 # Configurar el DataFrame de entrada de streaming
 inputPath = "/Users/mny_1026/Downloads/csv_directory"
