@@ -34,8 +34,8 @@ El modelo se evalúa utilizando el área bajo la curva ROC (AUC-ROC) y se genera
 
 ## Archivos del Proyecto
 
-- **[streaming_spark.py](./streaming_spark.py):** Código principal que ejecuta todo el proceso de lectura de datos, limpieza, balanceo, entrenamiento y evaluación del modelo.
-- **[data/](./data/):** Directorio que contiene los archivos CSV de datos de colisiones.
+- **[streaming_spark.py](./spark_local.md):** Código principal que ejecuta todo el proceso de lectura de datos, limpieza, balanceo, entrenamiento y evaluación del modelo.
+- **[data/](./data_source.md):** Directorio que contiene los archivos CSV de datos de colisiones.
 - **[README.md](./README.md):** Documento de introducción y descripción general del proyecto (este archivo).
 
 ## Instalación y Ejecución
