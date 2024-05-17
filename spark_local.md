@@ -120,8 +120,8 @@ Forma de la Curva:
 
 La curva ROC muestra un comportamiento ascendente con algunas fluctuaciones, lo cual es esperado en modelos que no son perfectos.
 La curva se mantiene por encima de la línea roja diagonal, que representa un clasificador aleatorio. Esto indica que el modelo tiene un desempeño mejor que un clasificador aleatorio.
-Análisis Detallado
-Puntos Clave:
+
+# Puntos Clave:
 Al inicio (cerca de (0, 0)), la curva muestra una pendiente pronunciada, indicando que el modelo logra capturar una buena cantidad de verdaderos positivos con pocos falsos positivos.
 Conforme la FPR aumenta, la TPR también lo hace, pero con fluctuaciones, lo cual indica que el modelo tiene ciertos errores en la clasificación.
 Evaluación del Modelo:
