@@ -107,7 +107,7 @@ train_data = assembler.transform(train_data)
 test_data = assembler.transform(test_data)
 
 ```
-
+# Entreno, evaluo y grafico el modelo
 ```python
 from pyspark.ml.classification import LogisticRegression
 
