@@ -105,3 +105,25 @@ accidents_by_hour.writeStream.outputMode("complete").format("console").start().a
 
 # MODELO DE MACHINE LEARNING
 
+<img width="1440" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/9d0be754-5a6c-4522-8cc2-c327a33d4d34">
+# Análisis de la Curva ROC para la Regresión Logística
+## Descripción General
+La gráfica muestra la curva ROC (Receiver Operating Characteristic) resultante de aplicar un modelo de regresión logística a los datos disponibles. La ROC es una herramienta útil para evaluar el desempeño de un clasificador binario. En el eje horizontal (X) se encuentra la Tasa de Falsos Positivos (FPR), mientras que en el eje vertical (Y) se encuentra la Tasa de Verdaderos Positivos (TPR).
+
+# Área Bajo la Curva (AUC):
+## Interpretación de la Curva
+![image](https://github.com/many1026/streaming_spark/assets/73008381/15f95caa-98f8-47b3-94ac-73e6a3bf4e10)
+
+El área bajo la curva ROC (AUC) es de 0.66. Este valor indica la capacidad del modelo para distinguir entre las clases positivas y negativas.
+Una AUC de 0.66 sugiere que el modelo tiene una habilidad moderada para distinguir entre las clases. En términos generales, una AUC de 0.5 indica un modelo sin capacidad de discriminación (equivalente a un clasificador aleatorio), mientras que una AUC de 1.0 indica un modelo perfecto.
+Forma de la Curva:
+
+La curva ROC muestra un comportamiento ascendente con algunas fluctuaciones, lo cual es esperado en modelos que no son perfectos.
+La curva se mantiene por encima de la línea roja diagonal, que representa un clasificador aleatorio. Esto indica que el modelo tiene un desempeño mejor que un clasificador aleatorio.
+Análisis Detallado
+Puntos Clave:
+Al inicio (cerca de (0, 0)), la curva muestra una pendiente pronunciada, indicando que el modelo logra capturar una buena cantidad de verdaderos positivos con pocos falsos positivos.
+Conforme la FPR aumenta, la TPR también lo hace, pero con fluctuaciones, lo cual indica que el modelo tiene ciertos errores en la clasificación.
+Evaluación del Modelo:
+Aunque el modelo tiene una AUC mayor a 0.5, lo cual es positivo, el valor de 0.66 sugiere que hay espacio para mejorar.
+Dependiendo del contexto y la aplicación, una AUC de 0.66 puede ser suficiente, pero generalmente se buscaría mejorar este valor ajustando el modelo, incorporando más características, o utilizando técnicas avanzadas de modelado.
