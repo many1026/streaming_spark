@@ -1,4 +1,8 @@
-# MEDIA
+# Métricas
+# Datos de streaming
+<img width="614" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/a4818714-8b9e-409b-ac90-c0b7d0f30594">
+
+# Media
 
 ![image](https://github.com/many1026/streaming_spark/assets/73008381/90623281-d5ca-441b-81b9-1bc91c713d69)
 ![image](https://github.com/many1026/streaming_spark/assets/73008381/716b091b-d6aa-49c2-9a56-71fee4755bc3)
