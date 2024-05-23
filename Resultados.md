@@ -2,6 +2,9 @@
 # Datos de streaming
 <img width="614" alt="image" src="https://github.com/many1026/streaming_spark/assets/73008381/a4818714-8b9e-409b-ac90-c0b7d0f30594">
 
+![image](https://github.com/many1026/streaming_spark/assets/73008381/0f0ec856-43e3-446c-a5b9-b77eeaeaa598)
+
+
 ![image](https://github.com/many1026/streaming_spark/assets/73008381/3810062e-e158-4619-9660-96853936a3be)
 
 
