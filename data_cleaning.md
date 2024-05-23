@@ -1,24 +1,25 @@
 # Limpieza de Datos de Accidentes de Tráfico
 Proceso de Limpieza y Preparación de Datos para Colisiones de Vehículos Motorizados
-Cargar los Datos
+# Cargar los Datos
+
 Primero, cargamos el archivo CSV que contiene los datos de las colisiones de vehículos motorizados en un DataFrame de pandas.
 
-Seleccionar las Columnas Relevantes
+# Seleccionar las Columnas Relevantes
 Definimos las columnas que son relevantes para nuestro análisis y creamos un nuevo DataFrame que contiene solo estas columnas.
 
-Contar los Valores NA
+# Contar los Valores NA
 Contamos el número total de valores NA en el DataFrame con las columnas relevantes.
 
-Interpolación de Valores NA
+# Interpolación de Valores NA
 Aplicamos la interpolación lineal para llenar los valores NA en las columnas numéricas.
 
-Contar Valores NA en Columnas Específicas
+# Contar Valores NA en Columnas Específicas
 Contamos los valores NA en las columnas específicas de interés antes y después de la interpolación.
 
-Imputar Valores NA en 'ZIP CODE' y 'BOROUGH'
+# Imputar Valores NA en 'ZIP CODE' y 'BOROUGH'
 Convertimos la columna 'ZIP CODE' a valores numéricos, forzando los errores a NaN. Luego, imputamos los valores NA en 'BOROUGH' con la moda y en 'ZIP CODE' con la media redondeada hacia abajo.
 
-Guardar el DataFrame Procesado
+# Guardar el DataFrame Procesado
 Finalmente, guardamos el DataFrame procesado en un archivo CSV.
 ```python
 #%%
